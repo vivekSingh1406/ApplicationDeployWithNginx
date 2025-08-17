@@ -58,3 +58,35 @@ sudo systemctl restart nginx
 ```
 java -jar /path/to/your/spring-boot-app/target/your-app.jar
 ```
+
+#### Summary of Commands
+```
+# Build React app
+cd /path/to/your/react-app
+npm run build
+
+# Build Spring Boot app
+cd /path/to/your/spring-boot-app
+./mvnw clean package
+
+# Install Nginx
+sudo apt update
+sudo apt install nginx
+
+# Create Nginx config
+sudo nano /etc/nginx/sites-available/myapp.conf
+
+# (Add the Nginx configuration)
+
+# Enable the configuration
+sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/
+
+# Test Nginx configuration
+sudo nginx -t
+
+# Restart Nginx
+sudo systemctl restart nginx
+
+# Run Spring Boot app
+java -jar /path/to/your/spring-boot-app/target/your-app.jar
+```
